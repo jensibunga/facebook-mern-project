@@ -11,6 +11,7 @@ var MongoStore = require('connect-mongo')(session);
 //validation
 var cors = require('cors');
 var { check, validationResult } = require('express-validator/check');
+var path = require('path'); //for deployment
 var app = express();
 
 app.use('/static', express.static(__dirname + '/client/build/static'));

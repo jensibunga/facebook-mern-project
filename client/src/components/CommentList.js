@@ -17,7 +17,7 @@ class CommentList  extends React.Component {
   handleCommentSubmit(event) {
     event.preventDefault();
     let _this = this;
-    axios.post(`${process.env.REACT_APP_BACKEND_URL}`, {
+    axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/comment`, {
       text: this.state.commentText,
       postId: this.props.postId,
       userId: this.props.userId

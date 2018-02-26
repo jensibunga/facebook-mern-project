@@ -33,7 +33,7 @@ class Profile extends React.Component {
 
 componentDidMount() {
   let _this = this;
-  axios.get(`process.env.REACT_APP_BACKEND_URL/api/current_user`)
+  axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/current_user`)
     .then(function (response) {
       console.log(response);
       if (response.data.error) {

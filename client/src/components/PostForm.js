@@ -22,7 +22,7 @@ class PostForm extends React.Component {
   handleSubmit(event) {
     let _this = this;
     event.preventDefault();
-    axios.post(`${process.env.REACT_APP_BACKEND_URL}`, {
+    axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/post`, {
       postMessage: this.state.postMessage,
       userId: this.props.user._id
   

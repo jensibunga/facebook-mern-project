@@ -7,6 +7,9 @@ import Timeline from './Timeline';
 import Profile from './Profile';
 import EditProfile from './EditProfile';
 
+function NotFound() {
+  return <h1>Not Found</h1>
+}
 
 class App extends React.Component {
 
@@ -18,6 +21,7 @@ class App extends React.Component {
   <Route exact path="/timeline" component={Timeline}/>
   <Route exact path="/profile" component={Profile}/>
   <Route exact path="/profile/edit" component={EditProfile} />
+  <Route component={NotFound} />
 
   
 

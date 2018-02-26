@@ -335,4 +335,8 @@ app.delete('/api/profile/delete', function (req, res) {
   res.send({ message: 'Deleted profile' });
 })
 
+app.get('*', (req, res)=>{
+  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+})
+
 app.listen(process.env.PORT || 8080);

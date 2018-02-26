@@ -28,7 +28,7 @@ class Login extends React.Component {
   handleSubmit(event) {
     let _this = this;
     event.preventDefault();
-    axios(`${process.env.REACT_APP_BACKEND_URL}`, {
+    axios(`${process.env.REACT_APP_BACKEND_URL}/api/login`, {
       method: 'post',
       data:{
         email: this.state.email,
